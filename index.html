@@ -24,9 +24,9 @@
                         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
                     ];
                     dateAndTime = element.date.split(" ")
+                    pom = dateAndTime+""
                     const d = new Date(dateAndTime[0])
-                    var date = d.getDay() + " " + month[d.getMonth()] + " " + d.getFullYear()
-
+                    var date =pom[8]+pom[9]+" " +month[d.getMonth()] + " " + d.getFullYear()
                     var div = document.createElement("div")
                     var html = ['<div class="card" style="border:1px solid grey;  " >',
                         '<div class="header">',
@@ -40,9 +40,9 @@
                         '</div>',
                         '<div class="content">',
                         '<p class="text">' + element.caption + '</p>',
-                        '<img id="srce" src="icons/heart.svg" class="likeShape" onclick="heart(this,' + element.likes + ',' + counter + ')" align="left"></img>',
                         '</div>',
                         '<div class="like-button">',
+                        '<img id="srce" src="icons/heart.svg" class="likeShape" onclick="heart(this,' + element.likes + ',' + counter + ')" align="left"></img>',
                         '<p id="likes' + counter + '">' + element.likes + '</p>',
                         '</div>',
                         '</div>'].join('');
@@ -84,16 +84,17 @@
                     "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
                 ];
                 dateAndTime = jsondata[i].date.split(" ")
+                pom = dateAndTime+""
                 const d = new Date(dateAndTime[0])
-                var date = d.getDay() + " " + month[d.getMonth()] + " " + d.getFullYear()
-
+                var date = pom[8]+pom[9]+" " + month[d.getMonth()] + " " + d.getFullYear()
+                console.log(i+" "+dateAndTime[0])
                 var div = document.createElement("div")
                 var html = ['<div class="card" style="border:1px solid grey;" >',
                     '<div class="header">',
                     '<img class="user-image" src="' + jsondata[i].profile_image + '" align="left"></img>',
                     '<p class="user-name" >' + jsondata[i].name + '</p>',
                     '<span class="span-pos"><img class="insta-logo" src="icons/instagram-logo.svg"</img></span>',
-                    '<div class="instagram-card-time"><p class="post-date">' + date + '</p></div>',
+                    '<div class="instagram-card-time'+jsondata[i].date+'"><p class="post-date">' + date + '</p></div>',
                     '</div>',
                     '<div class="card-image">',
                     '<img class="post-image" id="slika'+i+'" src="' + jsondata[i].image + ' " align="center"/>',

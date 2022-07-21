@@ -18,7 +18,7 @@
     font-size: smaller;
 }
 #grid{
-    background-color: red;
+    background-color: rgb(181, 181, 181);
     width: 100%;
     position: absolute;
     
@@ -54,11 +54,32 @@ p{
     position:absolute;
     background-color: aqua;
     border-radius: 15%;
-    width: 200px;
-    height: 70px;
-    bottom:0;
+    width: 170px;
+    height: 50px;
+    bottom:20px;
     right: 50%;
 }
+button {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  button:hover {background-color: #3e8e41}
+  
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 .text{
     font-size:small;
     text-align: left;
@@ -78,16 +99,17 @@ p{
    position: relative; 
 }
 .like-button p{
-    position: relative;
-    left:12%;
-
-}
-.like-button img{
     position: absolute;
-    
-
+    left: 12%;
+    top: 50%;
 }
-@media screen and (max-width: 1510px){
+#srce{
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+@media screen  and (min-width:2500px){
     .user-image{
         margin-left: 10px;
         height: 30px;
@@ -111,7 +133,7 @@ p{
     }
     .card{
         float: left;
-        height: 500px;
+        height: 600px;
         /* width: 250px; */
         width: 20%;
         margin-left: 20px;
@@ -156,6 +178,107 @@ p{
         width: 160px;
         object-fit:cover;
     }
+    .like-button{
+        border-top: 1px solid gray;
+        position: relative; 
+     }
+     .like-button p{
+         position: absolute;
+         left: 20%;
+         top: 50%;
+     }
+     #srce{
+         position: absolute;
+         margin-top: 15px;
+         margin-left: 15px;
+         margin-right: 15px;
+     }
+}
+
+@media screen  and (min-width:992px) and (max-width: 1510px){
+    .user-image{
+        margin-left: 10px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+    }
+    .post-image{
+        margin-left: 15px;
+        height: 10%;
+        width: 90%;
+    }
+    .post-date{
+        margin-left: 10px;
+        font-size: smaller;
+    }
+    #grid{
+        background-color: red;
+        width: 100%;
+        position: absolute;
+        
+    }
+    .card{
+        float: left;
+        height: 600px;
+        /* width: 250px; */
+        width: 20%;
+        margin-left: 20px;
+        margin-top: 40px;
+        margin-right: 10px;
+        margin-bottom: 80px;
+        background-color: rgb(255, 255, 255);
+        
+    }
+    .insta-logo{
+        position: absolute;
+        left: 55%;
+        bottom: 5%;
+    }
+    .span-pos{
+        position: absolute;
+        width: 30%;
+    
+    }
+    p{
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    #grid button{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size:x-large;
+        position:absolute;
+        background-color: aqua;
+        border-radius: 15%;
+        width: 200px;
+        height: 70px;
+        bottom:0;
+        right: 50%;
+        
+    }
+    .text{
+        font-size:small;
+        text-align: left;
+    }
+    #slika14{
+        margin-left: 15px;
+        height: 150px;
+        width: 160px;
+        object-fit:cover;
+    }
+    .like-button{
+        border-top: 1px solid gray;
+        position: relative; 
+     }
+     .like-button p{
+         position: absolute;
+         left: 20%;
+         top: 50%;
+     }
+     #srce{
+         position: absolute;
+         margin-top: 15px;
+         margin-left: 15px;
+         margin-right: 15px;
+     }
 }
 /* For Mobile */
 @media screen and (max-width: 768px) {
